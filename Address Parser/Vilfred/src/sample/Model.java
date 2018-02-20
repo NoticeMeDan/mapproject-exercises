@@ -7,9 +7,9 @@ public class Model {
     private List<String> streets, cities, zipcode;
 
     public Model() throws FileNotFoundException {
-        cities = addData("/Users/Vilfred/Desktop/ITU/2. semester/Algorithms/Algo Git/algo-exercises/Address Parser/src/resources/textfiles/cities.txt");
-        streets = addData("/Users/Vilfred/Desktop/ITU/2. semester/Algorithms/Algo Git/algo-exercises/Address Parser/src/resources/textfiles/streets.txt");
-        zipcode = addData("/Users/Vilfred/Desktop/ITU/2. semester/Algorithms/Algo Git/algo-exercises/Address Parser/src/resources/textfiles/zipcode.txt");
+        cities = addData("/Users/Vilfred/Desktop/ITU/2. semester/Førsteårsprojekt/Handson/mapproject-exercises/Address Parser/Vilfred/src/resources/textfiles/cities.txt");
+        streets = addData("/Users/Vilfred/Desktop/ITU/2. semester/Førsteårsprojekt/Handson/mapproject-exercises/Address Parser/Vilfred/src/resources/textfiles/streets.txt");
+        zipcode = addData("/Users/Vilfred/Desktop/ITU/2. semester/Førsteårsprojekt/Handson/mapproject-exercises/Address Parser/Vilfred/src/resources/textfiles/zipcode.txt");
     }
     public List<String> getCities(){
         return cities;

@@ -15,16 +15,14 @@ public class Main extends Application {
         primaryStage.setTitle("Address Parser");
         primaryStage.setScene(new Scene(root, 1280, 780));
         primaryStage.show();
-
     }
-
-
     public static void main(String[] args) throws IOException {
-        Model model = new Model();
-        System.out.println(model.getCities());
+
+        /*System.out.println(model.getCities());
         System.out.println(model.getStreets());
         System.out.println(model.getZipcode());
+        */
 
-        //launch(args);
+        launch(args);
     }
 }

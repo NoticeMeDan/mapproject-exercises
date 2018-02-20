@@ -5,6 +5,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
 <?import sample.AutoCompleteTextField?>
+<?import javafx.scene.control.Button?>
 <BorderPane minHeight="780" minWidth="1280" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <center>
         <TextArea fx:id="output" />
@@ -21,7 +22,7 @@
              <Text text="City" layoutX="250.0" layoutY="120.0"/>
              <AutoCompleteTextField fx:id="cityInput" onAction="#enterCity" layoutX="250.0" layoutY="140.0" minWidth="125" minHeight="50" promptText="København S"/>
 
-             <Text fx:id="Address" text="Rued Langgaards vej 7, 2300 København S" layoutX="500.0" layoutY="170.0"/>
+             <Button fx:id="add" onAction="#addAddress" layoutX="500.0" layoutY="100.0" minHeight="50" minWidth="50" text="Add Address"/>
          </children>
       </Pane>
    </top>

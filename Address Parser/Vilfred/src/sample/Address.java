@@ -45,7 +45,8 @@ public class Address {
     public String city()     { return city; }
 
     public static Address parse(String s) {
-        final String regex = "((?<street>[a-zA-ZåæøÅÆØ ]+?)\\s+(?<house>\\d+))?\\s*[,]*\\s*((?<postcode>\\d{4})\\s+(?<city>[a-zA-ZåæøÅÆØ ]+))?";
+        final String regex = "^(((?<street>\\d*?[.]?[a-zA-ZåæøÅÆØ\\- ]+?)\\s+(?<house>\\d+?[A-Z]?\\s?)?\\s*?((?<floor>\\d*?\\s?[Sal]*?)?\\s+?(?<side>[t]{1}[v]?[h]?[.]?)?)?\\s*[,]*\\s*)?((?<postcode>\\d{4})?\\s+(?<city>[a-zA-ZåæøÅÆØ ]+)?)?)?$";
+        final String string = "Rued Langgaards Vej 7A, 2300 København S";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(s);
         Builder b = new Builder();

@@ -10,6 +10,7 @@ import javafx.scene.control.CustomMenuItem;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+import javax.swing.*;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.SortedSet;
@@ -25,6 +26,8 @@ public class AutoCompleteTextField extends TextField
     private final SortedSet<String> entries;
     /** The popup used to select an entry. */
     private ContextMenu entriesPopup;
+
+    private Controller controller;
 
     /** Construct a new AutoCompleteTextField. */
     public AutoCompleteTextField() {
@@ -63,9 +66,7 @@ public class AutoCompleteTextField extends TextField
                 entriesPopup.hide();
             }
         });
-
     }
-
     /**
      * Get the existing set of autocomplete entries.
      * @return The existing autocomplete entries.
@@ -77,6 +78,7 @@ public class AutoCompleteTextField extends TextField
      * @param searchResult The set of matching strings.
      */
     private void populatePopup(List<String> searchResult) {
+        controller = new Controller();
         List<CustomMenuItem> menuItems = new LinkedList<>();
         // If you'd like more entries, modify this line.
         int maxEntries = 10;
@@ -90,6 +92,11 @@ public class AutoCompleteTextField extends TextField
             {
                 @Override
                 public void handle(ActionEvent actionEvent) {
+                    /*String text = getText();
+                    if(controller.isZipcode(text)){
+                        setText(text.substring(0,4));
+                        controller.cityInput.setText(text.substring(5));
+                    }*/
                     setText(result);
                     entriesPopup.hide();
                 }
@@ -100,4 +107,5 @@ public class AutoCompleteTextField extends TextField
         entriesPopup.getItems().addAll(menuItems);
 
     }
+
 }

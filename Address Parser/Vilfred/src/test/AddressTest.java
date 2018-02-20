@@ -43,12 +43,8 @@ public class AddressTest {
         assertEquals("Valby", a.city());
     }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void testInvalidInput1() {
-        String input = "39 Gade 39 Gade";
-        Address a = Address.parse(input);
 
-    }
+
     @Test(expected = IllegalArgumentException.class)
     public void testInvalidInput2() {
         String input = "Test 12, 123 City";

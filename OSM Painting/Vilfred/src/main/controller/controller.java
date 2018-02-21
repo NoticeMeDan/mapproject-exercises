@@ -1,7 +1,29 @@
-package main.controller;
+package javafxml_web;
 
-import javafx.scene.canvas.Canvas;
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import main.MyBrowser;
 
-public class controller {
-    public Canvas map;
+/**
+ *
+ * @web http://java-buddy.blogspot.com/
+ */
+public class Controller implements Initializable {
+
+    @FXML
+    private MyBrowser mybrowser;
+
+    @FXML
+    private void handleButtonAction(ActionEvent event) {
+
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    }
+
 }

@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
-<?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafxml_web.*?>
 
-<?import javafx.scene.canvas.Canvas?>
-<BorderPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="main.controller.controller"
-            prefHeight="400.0" prefWidth="600.0">
-
-    <center>
-        <Canvas fx:id="map" height="720" width="1280"/>
-    </center>
-
-</BorderPane>
+<?import main.MyBrowser?>
+<AnchorPane id="AnchorPane" prefHeight="500" prefWidth="660" xmlns:fx="http://javafx.com/fxml" fx:controller="javafxml_web.Controller">
+    <children>
+        <MyBrowser id="mybrowser" layoutX="10" layoutY="10" prefHeight="460" prefWidth="620" fx:id="mybrowser" />
+    </children>
+</AnchorPane>
